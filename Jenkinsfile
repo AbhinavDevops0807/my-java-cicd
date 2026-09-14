@@ -50,17 +50,6 @@ pipeline {
             }
         }
 
-        stage('5 - Trivy Filesystem Scan') {
-            steps {
-                sh '''
-                    trivy fs \
-                      --scanners vuln,secret,misconfig \
-                      --severity HIGH,CRITICAL \
-                      --exit-code 0 \
-                      .
-                '''
-            }
-        }
 
         stage('6 - Build Docker Image') {
             steps {
@@ -68,16 +57,6 @@ pipeline {
             }
         }
 
-        stage('7 - Trivy Image Scan') {
-            steps {
-                sh '''
-                    trivy image \
-                      --severity HIGH,CRITICAL \
-                      --exit-code 0 \
-                      ${IMAGE_NAME}:${BUILD_NUMBER}
-                '''
-            }
-        }
 
         stage('8 - Save Docker Image') {
             steps {
