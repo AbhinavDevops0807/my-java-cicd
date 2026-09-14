@@ -8,7 +8,7 @@ public class HelloController {
 
     @GetMapping("/")
     public String home() {
-        return "return "Hello! Version 2 is deployed automatically!";.";
+        return "Hello! Version 2 is deployed automatically!";
     }
 
     @GetMapping("/health")
