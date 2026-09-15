@@ -8,7 +8,7 @@ public class HelloController {
 
     @GetMapping("/")
     public String home() {
-        return "Hello! Version 3 is deployed automatically by Abhinav through CI/CD!";
+        return "Hello! Git Testing Git testing";
     }
 
     @GetMapping("/health")
