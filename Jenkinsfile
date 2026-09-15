@@ -6,10 +6,6 @@ pipeline {
         timestamps()
     }
 
-    triggers {
-        pollSCM('H/5 * * * *')
-    }
-
     tools {
         maven 'Maven-3.9'
     }
