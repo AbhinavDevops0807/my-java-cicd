@@ -8,7 +8,7 @@ public class HelloController {
 
     @GetMapping("/")
     public String home() {
-        return "Hello! webhook testing!";
+        return "Hello! Version 3 is deployed automatically with webhook!";
     }
 
     @GetMapping("/health")
